@@ -1,3 +1,5 @@
+# Ejercicio de iteradores lo que hace es crear un iterador para los números impares y pares
+
 numeros = 100
 
 iterador = iter(range(1, numeros +1, 2))

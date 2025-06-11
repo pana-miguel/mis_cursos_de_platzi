@@ -1,3 +1,5 @@
+#este codigo es un ejemplo de iteraciones for y while en python
+
 numbers = [1, 2, 3, 4, 5]
 
 for i in numbers:

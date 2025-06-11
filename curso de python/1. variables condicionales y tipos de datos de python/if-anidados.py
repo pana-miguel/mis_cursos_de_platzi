@@ -1,3 +1,5 @@
+# este codigo es un ejemplo de if anidados donde se evidencia como funcionan los condicionales 
+
 miembro = True
 edad = 15
 

@@ -1,3 +1,5 @@
+#juego de piedra papel o tijera y todas las posibles combinaciones de resultados
+
 jugador1 = input("Jugador 1, ingrese su nombre: ") 
 jugador2 = input("Jugador 2, ingrese su nombre: ")
 
