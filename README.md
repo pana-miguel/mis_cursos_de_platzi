@@ -1,4 +1,4 @@
-# mis_cursos_de_platzi# 📚 Mis avances en cursos de Platzi
+📚 Mis avances en cursos de Platzi
 
 Este repositorio es una recopilación personal de los cursos que he realizado en la plataforma **Platzi**. Aquí documentaré tanto mi progreso como los aprendizajes técnicos adquiridos, organizando cada curso en su propia carpeta.
 
