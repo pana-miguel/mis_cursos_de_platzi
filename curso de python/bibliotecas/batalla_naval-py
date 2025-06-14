@@ -1,0 +1,132 @@
+# Clase que representa un barco
+class Barco:
+    def __init__(self, nombre, tamanio):
+        self.nombre = nombre  # Nombre del barco (ej. Destructor)
+        self.tamanio = tamanio  # Tamaño del barco (número de casillas que ocupa)
+        self.posiciones = []  # Lista de posiciones que ocupa el barco
+        self.golpes = 0  # Contador de golpes recibidos
+
+    def colocar_barco(self, fila_inicio, columna_inicio, direccion, tablero):
+        posiciones_temporales = []  # Lista temporal para verificar posiciones antes de colocarlas
+        if direccion == 'H':  # Si la dirección es horizontal
+            if columna_inicio + self.tamanio > len(tablero[0]):  # Verifica si el barco cabe horizontalmente
+                return False
+            for i in range(self.tamanio):  # Recorre cada parte del barco
+                if tablero[fila_inicio][columna_inicio + i] != ' ':  # Verifica que la casilla esté libre
+                    return False
+                posiciones_temporales.append((fila_inicio, columna_inicio + i))  # Agrega posición válida
+        elif direccion == 'V':  # Si la dirección es vertical
+            if fila_inicio + self.tamanio > len(tablero):  # Verifica si el barco cabe verticalmente
+                return False
+            for i in range(self.tamanio):  # Recorre cada parte del barco
+                if tablero[fila_inicio + i][columna_inicio] != ' ':  # Verifica que la casilla esté libre
+                    return False
+                posiciones_temporales.append((fila_inicio + i, columna_inicio))  # Agrega posición válida
+        else:
+            return False  # Dirección no válida
+
+        for fila, columna in posiciones_temporales:  # Coloca el barco en el tablero
+            tablero[fila][columna] = self.nombre[0]  # Usa la primera letra del nombre del barco
+        self.posiciones = posiciones_temporales  # Guarda las posiciones finales
+        return True
+
+    def recibir_golpe(self):
+        self.golpes += 1  # Aumenta el contador de golpes
+        return self.golpes == self.tamanio  # Devuelve True si el barco está hundido
+
+# Clases hijas que representan tipos específicos de barcos
+class Destructor(Barco):
+    def __init__(self):
+        super().__init__('Destructor', 2)  # Destructor ocupa 2 casillas
+
+class Submarino(Barco):
+    def __init__(self):
+        super().__init__('Submarino', 3)  # Submarino ocupa 3 casillas
+
+class Acorazado(Barco):
+    def __init__(self):
+        super().__init__('Acorazado', 4)  # Acorazado ocupa 4 casillas
+
+# Clase que representa a un jugador
+class Jugador:
+    def __init__(self, nombre):
+        self.nombre = nombre  # Nombre del jugador
+        self.tablero = [[' ' for _ in range(10)] for _ in range(10)]  # Tablero del jugador
+        self.barcos = []  # Lista de barcos del jugador
+        self.tablero_golpes = [[' ' for _ in range(10)] for _ in range(10)]  # Tablero donde se registran los ataques
+
+    def colocar_barcos(self):
+        barcos = [Destructor(), Submarino(), Acorazado()]  # Lista de barcos a colocar
+        for barco in barcos:
+            while True:
+                print(f"{self.nombre}, coloca tu {barco.nombre} de tamaño {barco.tamanio}.")
+                fila_inicio = int(input("Fila inicial: "))  # Solicita fila
+                columna_inicio = int(input("Columna inicial: "))  # Solicita columna
+                direccion = input("Dirección (H para horizontal, V para vertical): ").upper()  # Solicita dirección
+                if barco.colocar_barco(fila_inicio, columna_inicio, direccion, self.tablero):  # Intenta colocar barco
+                    self.barcos.append(barco)  # Añade el barco a la lista del jugador
+                    self.imprimir_tablero(self.tablero)  # Muestra el tablero
+                    break
+                else:
+                    print("Posición no válida. Inténtalo de nuevo.")
+
+    def imprimir_tablero(self, tablero):
+        for fila in tablero:  # Imprime cada fila del tablero
+            print(" ".join(fila))
+        print()
+
+    def atacar(self, oponente):
+        while True:
+            print(f"{self.nombre}, elige una posición para atacar.")
+            fila = int(input("Fila: "))  # Solicita fila a atacar
+            columna = int(input("Columna: "))  # Solicita columna a atacar
+            if 0 <= fila < 10 and 0 <= columna < 10:  # Verifica que esté dentro del tablero
+                if oponente.tablero[fila][columna] == ' ':  # Si es agua
+                    print("¡Agua!")
+                    self.tablero_golpes[fila][columna] = 'A'  # Marca agua
+                    oponente.tablero[fila][columna] = 'A'
+                    break
+                elif oponente.tablero[fila][columna] != 'A':  # Si acierta un barco
+                    print("¡Impacto!")
+                    self.tablero_golpes[fila][columna] = 'T'  # Marca impacto
+                    for barco in oponente.barcos:
+                        if (fila, columna) in barco.posiciones:  # Verifica a qué barco golpeó
+                            if barco.recibir_golpe():  # Si se hunde
+                                print(f"¡Hundido! Has hundido el {barco.nombre}.")
+                            break
+                    oponente.tablero[fila][columna] = 'T'
+                    break
+                else:
+                    print("Ya has atacado esta posición. Intenta de nuevo.")
+            else:
+                print("Posición no válida. Intenta de nuevo.")
+
+    def todos_barcos_hundidos(self):
+        return all(barco.golpes == barco.tamanio for barco in self.barcos)  # Verifica si todos los barcos están hundidos
+
+# Clase principal del juego
+class JuegoBatallaNaval:
+    def __init__(self):
+        self.jugador1 = Jugador("Jugador 1")  # Crea jugador 1
+        self.jugador2 = Jugador("Jugador 2")  # Crea jugador 2
+
+    def jugar(self):
+        print("¡Bienvenido al juego de Batalla Naval!")
+        print("Jugador 1 coloca sus barcos.")
+        self.jugador1.colocar_barcos()  # Jugador 1 coloca sus barcos
+        print("Jugador 2 coloca sus barcos.")
+        self.jugador2.colocar_barcos()  # Jugador 2 coloca sus barcos
+
+        jugador_actual = self.jugador1  # Turno inicial
+        oponente = self.jugador2
+
+        while True:
+            jugador_actual.atacar(oponente)  # Jugador actual ataca
+            if oponente.todos_barcos_hundidos():  # Verifica si el oponente perdió
+                print(f"¡{jugador_actual.nombre} ha ganado el juego!")
+                break
+            jugador_actual, oponente = oponente, jugador_actual  # Cambia el turno
+
+# Crear una instancia del juego y jugar
+juego = JuegoBatallaNaval()
+juego.jugar()
