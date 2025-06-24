@@ -49,7 +49,7 @@ En la misma carpeta donde se encuentra este archivo , hay otros archivos que esp
 
 - [Anotaciones](./anotaciones/README.md)
 - [Bibliotecas](./bibliotecas/README.md)
-- [Código Paitónico](./"codigo pythonico"/README.md)
+- [Código Paitónico](./codigo_pythonico/README.md)
 - [Concurrencia y Paralelismo](./Concurrencia_Paralelismo/README.md)
 - [Creación de Módulos](./Creacion_Modulos/README.md)
 - [Decoradores](./Decoradores/README.md)
