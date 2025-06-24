@@ -30,7 +30,7 @@ También encontrarás en varios cursos:
 
 ## 📁 Estructura del repositorio
 
-La organización es sencilla y clara. Cada curso tiene su propia carpeta con su contenido:
+La organización es sencilla y clara. Cada curso tiene su propia carpeta con su contenido.
 
 ```bash
 mis_cursos_de_platzi/
