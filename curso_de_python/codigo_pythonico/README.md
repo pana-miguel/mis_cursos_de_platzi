@@ -55,7 +55,7 @@ for n in range(1, 101):
 suma = sum(range(1, 101))
 ```
 
-### 4. Uso de manejo de excepciones para controlar errores
+### 4. Uso de manejo de excepciones para controlar errores.
 
 ```python
 # No pythonico

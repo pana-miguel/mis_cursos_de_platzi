@@ -98,4 +98,4 @@ app = FastAPI()
 
 ## ✅ Recomendación
 
-Aprender a usar las principales bibliotecas de Python es fundamental para convertirte en un programador más eficiente. Cada una resuelve un problema específico y puede acelerar el desarrollo de tus proyectos.
+Aprender a usar las principales bibliotecas de Python es fundamental para convertirte en un programador más eficiente. Cada una resuelve un problema específico.
