@@ -33,7 +33,7 @@ Aqui veras otros archivos que especifican cada una de las clases o proyectos rea
 - [Manejo de Archivos](./manejo_de_archivos/README.md)  
 - [Modulos](./modulos/README.md)  
 
-
+1030
 ---
 
 ¡Bienvenido al curso y disfruta aprendiendo Python! 🚀
