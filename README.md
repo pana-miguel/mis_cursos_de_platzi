@@ -50,6 +50,7 @@ mis_cursos_de_platzi/
 En este apartado verás la introducción a cada uno de los cursos que he realizado en Platzi. Cada enlace te llevará a un archivo `README.md` específico del curso, donde explico en detalle su contenido, aprendizajes y organización.
 
 - [Curso de Python Básico](./curso_de_python/README.md)  
+- [curso de python: conprehesions y funciones ](./Curso_Python_Comprehensions_Funciones_Manejo_de_Errores/README.md) 
   _(Introducción, temas clave, entorno usado, y proyectos realizados)_
 
 Próximamente se agregarán más cursos a esta lista conforme avance en mi ruta de aprendizaje.

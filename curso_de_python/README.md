@@ -45,7 +45,8 @@ Todo el curso y proyectos están hechos en **Visual Studio Code** para facilitar
 
 ## Para saber más
 
-En la misma carpeta donde se encuentra este archivo , hay otros archivos que especifican cada una de las clases o proyectos realizados según cada parte del curso cada una con le mismo nombre de la carpeta, dento de cada una se resume como lo quer usa o hace el proyecto en palabras mas simples. 
+Aqui veras otros archivos que especifican cada una de las clases o proyectos realizados según cada parte del curso cada una con le mismo nombre de la carpeta, dento de cada una se resume lo que se usa o hace el proyecto. 
+
 
 - [Anotaciones](./anotaciones/README.md)
 - [Bibliotecas](./bibliotecas/README.md)
