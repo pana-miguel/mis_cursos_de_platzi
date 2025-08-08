@@ -29,11 +29,9 @@ Aqui veras otros archivos que especifican cada una de las clases o proyectos rea
 
 - [Funciones](./funciones/README.md)  
 - [Conjuntos](./conjuntos/README.md)  
-- [List Comprehensions](./list_comprehensions/README.md)  
-- [Manejo de Archivos](./manejo_de_archivos/README.md)  
+- [List Comprehensions](./list_comprehesion/README.md)  
+- [Manejo de Archivos](./manejo_de_archivos/README.md) 
 - [Modulos](./modulos/README.md)  
-
-1030
 ---
 
-¡Bienvenido al curso y disfruta aprendiendo Python! 🚀
+

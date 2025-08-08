@@ -17,6 +17,21 @@ Este repositorio sirve como archivo de mis estudios en **Platzi**, una plataform
 
 ---
 
+# Descargar librerías
+
+Para poder ejecutar correctamente los ejercicios y proyectos que encontrarás en las carpetas de los cursos, es necesario instalar las dependencias que cada proyecto requiere.
+
+En varias carpetas verás un archivo llamado `requirements.txt`, que contiene la lista de librerías necesarias. Para instalar todas estas librerías, sigue estos pasos:
+
+1. Abre la terminal y navega hasta la carpeta donde se encuentra el proyecto o curso que quieres ejecutar.
+2. Ejecuta el siguiente comando para instalar las dependencias desde el archivo `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+Este comando descargará e instalará automáticamente todas las librerías necesarias para que los ejercicios funcionen sin problemas.
+
+
 ## 🛠️ Tecnologías y entorno
 
 La mayoría de estos proyectos están desarrollados en entorno **Linux**, específicamente usando **WSL (Windows Subsystem for Linux)**. Esto permite tener control sobre entornos virtuales, instalación de librerías y estructuras de archivos, garantizando un flujo profesional de desarrollo.
@@ -50,8 +65,10 @@ mis_cursos_de_platzi/
 En este apartado verás la introducción a cada uno de los cursos que he realizado en Platzi. Cada enlace te llevará a un archivo `README.md` específico del curso, donde explico en detalle su contenido, aprendizajes y organización.
 
 - [Curso de Python Básico](./curso_de_python/README.md)  
-- [curso de python: conprehesions y funciones ](./Curso_Python_Comprehensions_Funciones_Manejo_de_Errores/README.md) 
-  _(Introducción, temas clave, entorno usado, y proyectos realizados)_
+- [curso de python: conprehesions y funciones](./Curso_Python_Comprehensions_Funciones_Manejo_de_Errores/README.md) 
+- [curso de python: pip y entornos virtuales](./curso_python_pip_entornos_virtuales/README.md) 
+
+  
 
 Próximamente se agregarán más cursos a esta lista conforme avance en mi ruta de aprendizaje.
 

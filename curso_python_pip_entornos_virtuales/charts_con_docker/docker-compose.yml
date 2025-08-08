@@ -1,0 +1,14 @@
+#services sirve para definir los servicios que componen la aplicación
+#app-csv es el nombre del servicio
+#build define cómo se construirá la imagen del servicio
+#context especifica el directorio donde se encuentra el Dockerfile
+#dockerfile especifica el nombre del archivo Dockerfile a utilizar
+#volumes permite que nuestro proyecto cuando le hacemos un cambio se refleje en el contenedor
+
+services:
+  app-csv:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
