@@ -10,10 +10,10 @@ Esto es fundamental para gestionar correctamente las librerías y evitar conflic
 
 esots son ejercisios realizados en el curso de platzi
 
-- [charts_con_docker](./charts_con_doker/README.md)  
-- [flujo_trabajo_python](./flujo_trabajo_pythom/README.md)  
-- [lectura_pandas](./lectura_pandas/README.md)  
-- [web_Serves](./web_Serves/README.md)  
+- [charts con docker](./charts_con_docker/README.md)  
+- [flujo de trabajo en python](./flujo_trabajo_python/README.md)  
+- [lectura de archivos con pandas](./lectura_pandas/README.md)  
+- [web Serves](./web_serves/README.md)  
 
 ---
 
