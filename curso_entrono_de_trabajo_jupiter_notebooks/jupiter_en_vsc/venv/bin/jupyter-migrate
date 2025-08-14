@@ -1,0 +1,7 @@
+#!/home/miguel/proyectos/mis_cursos_de_platzi/curso_entrono_de_trabajo_jupiter_notebooks/jupiter_en_vsc/venv/bin/python3
+import sys
+from jupyter_core.migrate import main
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(main())
