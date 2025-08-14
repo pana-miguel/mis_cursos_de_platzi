@@ -1,0 +1,10 @@
+name: ciencia_datos_jupyter
+channels:
+  - defaults
+dependencies:
+  - python
+  - jupyter
+  - matplotlib
+  - pandas
+  - vega_datasets
+prefix: /home/miguel/anaconda3/envs/ciencia_datos_jupyter
