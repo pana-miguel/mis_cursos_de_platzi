@@ -2,6 +2,8 @@
 
 ## 📌 Introducción
 
+Antes de usar conda se debe instalar anaconda que lo puedes buscar en google como anaconda download y por medio de un video ver como se instala y cual es su relacion con la terminal.
+
 **Conda** es un gestor de entornos y paquetes que permite instalar diferentes versiones de **Python** y librerías de forma aislada este ambiente o entorno virtual esta mas enfocado a la parte de ciencia o ingenieria de datos donde se usa mas.  
 A diferencia de `pip` o `venv`, conda gestiona tanto paquetes de Python como librerías de sistema, facilitando el trabajo en proyectos con dependencias diferentes.
 

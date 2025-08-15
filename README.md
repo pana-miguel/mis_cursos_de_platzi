@@ -67,6 +67,7 @@ En este apartado verás la introducción a cada uno de los cursos que he realiza
 - [Curso de Python Básico](./curso_de_python/README.md)  
 - [curso de python: conprehesions y funciones](./Curso_Python_Comprehensions_Funciones_Manejo_de_Errores/README.md) 
 - [curso de python: pip y entornos virtuales](./curso_python_pip_entornos_virtuales/README.md) 
+- [curso entorno de trabajo jupyter notebooks y Anaconda](./curso_entrono_de_trabajo_jupiter_notebooks%20y%20anaconda/README.md)
 
   
 
