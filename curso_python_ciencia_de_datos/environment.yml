@@ -1,0 +1,9 @@
+name: ciencia_datos_aplicada
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - python
+  - matplotlib
+  - jupyter
+prefix: /home/miguel/anaconda3/envs/ciencia_datos_aplicada
